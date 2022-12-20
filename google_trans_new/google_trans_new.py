@@ -122,12 +122,22 @@ class google_translator:
             return "Warning: Can only detect less than 5000 characters"
         if len(text) == 0:
             return ""
+        '''
         headers = {
             "Referer": "http://translate.google.{}/".format(self.url_suffix),
             "User-Agent":
                 "Mozilla/5.0 (Windows NT 10.0; WOW64) "
                 "AppleWebKit/537.36 (KHTML, like Gecko) "
                 "Chrome/47.0.2526.106 Safari/537.36",
+            "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+        }
+        '''
+        headers = {
+            "Referer": "http://translate.google.{}/".format(self.url_suffix),
+            "User-Agent":
+                "Mozilla/5.0 (X11; Linux x86_64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41",
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
         }
         freq = self._package_rpc(text, lang_src, lang_tgt)
@@ -202,12 +212,22 @@ class google_translator:
             return log.debug("Warning: Can only detect less than 5000 characters")
         if len(text) == 0:
             return ""
+        '''
         headers = {
             "Referer": "http://translate.google.{}/".format(self.url_suffix),
             "User-Agent":
                 "Mozilla/5.0 (Windows NT 10.0; WOW64) "
                 "AppleWebKit/537.36 (KHTML, like Gecko) "
                 "Chrome/47.0.2526.106 Safari/537.36",
+            "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+        }
+        '''
+        headers = {
+            "Referer": "http://translate.google.{}/".format(self.url_suffix),
+            "User-Agent":
+                "Mozilla/5.0 (X11; Linux x86_64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41",
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
         }
         freq = self._package_rpc(text)
